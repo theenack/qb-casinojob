@@ -1,6 +1,6 @@
 # qb-casinojob
 This is a Casino Job designed exclusivley for QBCore. 
-This resource stemed from https://github.com/Andyauk/qb-vanillaunicorn
+This resource stemed from qb-unicornjob. Still under development 1/4/2023
 
 
 ## Dependencies :
