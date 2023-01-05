@@ -123,7 +123,7 @@ ConsumeablesAlcohol = {
 
 ```
 QBShared.Items = {
--- Vanilla Unicorn Job
+-- Casino Job
 ["v-shots-pack"] 		    	 = {["name"] = "v-shots-pack", 		        	["label"] = "Shots Pack", 		    	["weight"] = 1600, 		["type"] = "item", 		["image"] = "v-shots-pack.png", 	    ["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "A Pack of 8 Shots. 2 of Each Flavour"},
 	["shot-absinthe"] 		 	     = {["name"] = "shot-absinthe", 		    	["label"] = "Absinthe Shot", 			["weight"] = 200, 		["type"] = "item", 		["image"] = "shot-absinthe.png", 	    ["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "A Shot of Absinthe."},
 	["shot-snakebite"] 		    	 = {["name"] = "shot-snakebite", 	    		["label"] = "Snakebite Shot", 			["weight"] = 200, 		["type"] = "item", 		["image"] = "shot-snakebite.png", 	    ["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "A Shot of Snake Bite."},
@@ -154,8 +154,8 @@ QBShared.Items = {
 ## Insert into @qb-core/shared/jobs.lua 
 ```
 QBShared.Jobs = {
-    ['vunicorn'] = {
-		label = 'Vanilla Unicorn',
+    ['casino'] = {
+		label = 'Casino',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
