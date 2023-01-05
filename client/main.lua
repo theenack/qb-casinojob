@@ -18,25 +18,13 @@ function DrawText3Ds(x, y, z, text)
     ClearDrawOrigin()
 end
 
-Citizen.CreateThread(function()
-    Unicorn = AddBlipForCoord(131.58, -1303.13, 29.23)
-    SetBlipSprite (Unicorn, 121)
-    SetBlipDisplay(Unicorn, 4)
-    SetBlipScale  (Unicorn, 0.7)
-    SetBlipAsShortRange(Unicorn, true)
-    SetBlipColour(Unicorn, 8)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName("Unicorn")
-    EndTextCommandSetBlipName(Unicorn)
-end)
-
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     QBCore.Functions.GetPlayerData(function(PlayerData)
         PlayerJob = PlayerData.job
         if PlayerData.job.onduty then
-            if PlayerData.job.name == "vunicorn" then
+            if PlayerData.job.name == "casino" then
                 TriggerServerEvent("QBCore:ToggleDuty")
             end
         end
@@ -54,13 +42,13 @@ AddEventHandler('QBCore:Client:SetDuty', function(duty)
 	onDuty = duty
 end)
 
-RegisterNetEvent("qb-unicornjob:DutyB")
-AddEventHandler("qb-unicornjob:DutyB", function()
+RegisterNetEvent("qb-casinojob:DutyB")
+AddEventHandler("qb-casinojob:DutyB", function()
     TriggerServerEvent("QBCore:ToggleDuty")
 end)
 
-RegisterNetEvent("qb-unicornjob:Table1")
-AddEventHandler("qb-unicornjob:Table1", function()
+RegisterNetEvent("qb-casinojob:Table1")
+AddEventHandler("qb-casinojob:Table1", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable1")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable1", {
         maxweight = 10000,
@@ -68,8 +56,8 @@ AddEventHandler("qb-unicornjob:Table1", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Table2")
-AddEventHandler("qb-unicornjob:Table2", function()
+RegisterNetEvent("qb-casinojob:Table2")
+AddEventHandler("qb-casinojob:Table2", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable2")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable2", {
         maxweight = 10000,
@@ -77,8 +65,8 @@ AddEventHandler("qb-unicornjob:Table2", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Table4")
-AddEventHandler("qb-unicornjob:Table4", function()
+RegisterNetEvent("qb-casinojob:Table4")
+AddEventHandler("qb-casinojob:Table4", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable4")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable4", {
         maxweight = 10000,
@@ -86,8 +74,8 @@ AddEventHandler("qb-unicornjob:Table4", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Table3")
-AddEventHandler("qb-unicornjob:Table3", function()
+RegisterNetEvent("qb-casinojob:Table3")
+AddEventHandler("qb-casinojob:Table3", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable3")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable3", {
         maxweight = 10000,
@@ -95,8 +83,8 @@ AddEventHandler("qb-unicornjob:Table3", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Table5")
-AddEventHandler("qb-unicornjob:Table5", function()
+RegisterNetEvent("qb-casinojob:Table5")
+AddEventHandler("qb-casinojob:Table5", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable5")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable5", {
         maxweight = 10000,
@@ -104,8 +92,8 @@ AddEventHandler("qb-unicornjob:Table5", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Table6")
-AddEventHandler("qb-unicornjob:Table6", function()
+RegisterNetEvent("qb-casinojob:Table6")
+AddEventHandler("qb-casinojob:Table6", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable6")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable6", {
         maxweight = 10000,
@@ -113,8 +101,8 @@ AddEventHandler("qb-unicornjob:Table6", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Table7")
-AddEventHandler("qb-unicornjob:Table7", function()
+RegisterNetEvent("qb-casinojob:Table7")
+AddEventHandler("qb-casinojob:Table7", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable7")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable7", {
         maxweight = 10000,
@@ -122,8 +110,8 @@ AddEventHandler("qb-unicornjob:Table7", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Table8")
-AddEventHandler("qb-unicornjob:Table8", function()
+RegisterNetEvent("qb-casinojob:Table8")
+AddEventHandler("qb-casinojob:Table8", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable8")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable8", {
         maxweight = 10000,
@@ -131,8 +119,8 @@ AddEventHandler("qb-unicornjob:Table8", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Table9")
-AddEventHandler("qb-unicornjob:Table9", function()
+RegisterNetEvent("qb-casinojob:Table9")
+AddEventHandler("qb-casinojob:Table9", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable9")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable9", {
         maxweight = 10000,
@@ -140,8 +128,8 @@ AddEventHandler("qb-unicornjob:Table9", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Table10")
-AddEventHandler("qb-unicornjob:Table10", function()
+RegisterNetEvent("qb-casinojob:Table10")
+AddEventHandler("qb-casinojob:Table10", function()
     TriggerEvent("inventory:client:SetCurrentStash", "drinkstable10")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "drinkstable10", {
         maxweight = 10000,
@@ -149,8 +137,8 @@ AddEventHandler("qb-unicornjob:Table10", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Storage")
-AddEventHandler("qb-unicornjob:Storage", function()
+RegisterNetEvent("qb-casinojob:Storage")
+AddEventHandler("qb-casinojob:Storage", function()
     TriggerEvent("inventory:client:SetCurrentStash", "vunicornstorage")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "vunicornstorage", {
         maxweight = 250000,
@@ -158,8 +146,8 @@ AddEventHandler("qb-unicornjob:Storage", function()
     })
 end)
 
-RegisterNetEvent("qb-unicornjob:Storage2")
-AddEventHandler("qb-unicornjob:Storage2", function()
+RegisterNetEvent("qb-casinojob:Storage2")
+AddEventHandler("qb-casinojob:Storage2", function()
     TriggerEvent("inventory:client:SetCurrentStash", "vunicornstorage2")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "vunicornstorage2", {
         maxweight = 250000,
@@ -175,7 +163,7 @@ CreateThread(function()
             local PlayerData = QBCore.Functions.GetPlayerData()
   
                 if PlayerJob.name == Config.JobName then
-                    for k, v in pairs(Config.VunicornLocations["vunicorn-duty"]) do
+                    for k, v in pairs(Config.CasinoLocations["casino-duty"]) do
                         local dist = #(pos - v)
                             if dist < 1.8 then
                               DrawMarker(2, v.x, v.y, v.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 16, 227, 86, 86, false, false, false, true, false, false, false)                              if dist < 1.8 then
@@ -200,7 +188,7 @@ CreateThread(function()
                     end
   
                 if PlayerJob.name == Config.JobName and QBCore.Functions.GetPlayerData().job.onduty then
-                for k, v in pairs(Config.VunicornLocations["drinks-1"]) do
+                for k, v in pairs(Config.CasinoLocations["drinks-1"]) do
                     if #(pos - vector3(v.x, v.y, v.z)) < 0.8 then
                       sleep = 5
                       QBCore.Functions.DrawText3D(v.x, v.y, v.z, "~g~[E]~w~ - Original Cocktails")
@@ -213,7 +201,7 @@ CreateThread(function()
                     end
                   end
   
-                for k, v in pairs(Config.VunicornLocations["vunicorn-menu"]) do
+                for k, v in pairs(Config.CasinoLocations["casino-menu"]) do
                     if #(pos - vector3(v.x, v.y, v.z)) < 0.9 then
                         sleep = 5
                         QBCore.Functions.DrawText3D(v.x, v.y, v.z, "~g~[E]~w~ - Access Menu")
@@ -226,12 +214,12 @@ CreateThread(function()
                     end
                 end
   
-                for k, v in pairs(Config.VunicornLocations["vunicorn-storage"]) do
+                for k, v in pairs(Config.CasinoLocations["casino-storage"]) do
                     if #(pos - vector3(v.x, v.y, v.z)) < 1.5 then
                         sleep = 5
                         QBCore.Functions.DrawText3D(v.x, v.y, v.z, "~g~[E]~w~ - Open Storage")
                         if IsControlJustReleased(0, 38) then
-                            TriggerEvent("qb-unicornjob:Storage")
+                            TriggerEvent("qb-casinojob:Storage")
                         end
                     elseif #(pos - vector3(v.x, v.y, v.z)) < 1.5 then
                         sleep = 5
@@ -239,7 +227,7 @@ CreateThread(function()
                     end
                 end
   
-                for k, v in pairs(Config.VunicornLocations["drinks-2"]) do
+                for k, v in pairs(Config.CasinoLocations["drinks-2"]) do
                     if #(pos - vector3(v.x, v.y, v.z)) < 1.5 then
                         sleep = 5
                         QBCore.Functions.DrawText3D(v.x, v.y, v.z, "~g~[E]~w~ - Classic Cocktails")
