@@ -4,12 +4,12 @@ This resource stemed from qb-unicornjob. Still under development 1/4/2023
 
 
 ## Dependencies :
-[QBCore Framework](https://github.com/qbcore-framework/qb-core)
-[PolyZone](https://github.com/mkafrin/PolyZone)
-[qb-target](https://github.com/BerkieBb/qb-target) (Only needed if not using draw text)
-[qb-input](https://github.com/qbcore-framework/qb-input)
-[qb-menu](https://github.com/qbcore-framework/qb-menu)
-Gabz Casino -
+-[QBCore Framework](https://github.com/qbcore-framework/qb-core)
+-[PolyZone](https://github.com/mkafrin/PolyZone)
+-[qb-target](https://github.com/BerkieBb/qb-target) (Only needed if not using draw text)
+-[qb-input](https://github.com/qbcore-framework/qb-input)
+-[qb-menu](https://github.com/qbcore-framework/qb-menu)
+- Gabz Casino -
 
 ## Insert into @qb-smallresources --> server --> consumables.lua
 ```
