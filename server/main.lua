@@ -1,12 +1,12 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 
-RegisterServerEvent("qb-unicornjob:bill:player")
-AddEventHandler("qb-unicornjob:bill:player", function(playerId, amount)
+RegisterServerEvent("qb-casinojob:bill:player")
+AddEventHandler("qb-casinojob:bill:player", function(playerId, amount)
         local biller = QBCore.Functions.GetPlayer(source)
         local billed = QBCore.Functions.GetPlayer(tonumber(playerId))
         local amount = tonumber(amount)
-        if biller.PlayerData.job.name == 'vunicorn' then
+        if biller.PlayerData.job.name == 'casino' then
             if billed ~= nil then
                 if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
                     if amount and amount > 0 then
@@ -33,7 +33,7 @@ AddEventHandler("qb-unicornjob:bill:player", function(playerId, amount)
         end
 end)
 
-QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientmargarita', function(source, cb)
+QBCore.Functions.CreateCallback('qb-casinojob:server:get:ingredientmargarita', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local tequila = Ply.Functions.GetItemByName("tequila")
@@ -46,7 +46,7 @@ QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientmargarita', 
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientOldFashioned', function(source, cb)
+QBCore.Functions.CreateCallback('qb-casinojob:server:get:ingredientOldFashioned', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local whiskey = Ply.Functions.GetItemByName("whiskey")
@@ -59,7 +59,7 @@ QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientOldFashioned
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientManhattan', function(source, cb)
+QBCore.Functions.CreateCallback('qb-casinojob:server:get:ingredientManhattan', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local whiskey = Ply.Functions.GetItemByName("whiskey")
@@ -71,7 +71,7 @@ QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientManhattan', 
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientEspressoMartini', function(source, cb)
+QBCore.Functions.CreateCallback('qb-casinojob:server:get:ingredientEspressoMartini', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local coffee = Ply.Functions.GetItemByName("coffee")
@@ -83,7 +83,7 @@ QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientEspressoMart
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientSparkles', function(source, cb)
+QBCore.Functions.CreateCallback('qb-casinojob:server:get:ingredientSparkles', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local vodka = Ply.Functions.GetItemByName("vodka")
@@ -96,7 +96,7 @@ QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientSparkles', f
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientUnicorn', function(source, cb)
+QBCore.Functions.CreateCallback('qb-casinojob:server:get:ingredientUnicorn', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local whiskey = Ply.Functions.GetItemByName("whiskey")
@@ -109,7 +109,7 @@ QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientUnicorn', fu
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientDancerz', function(source, cb)
+QBCore.Functions.CreateCallback('qb-casinojob:server:get:ingredientDancerz', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local beer = Ply.Functions.GetItemByName("beer")
@@ -122,7 +122,7 @@ QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientDancerz', fu
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientHulk', function(source, cb)
+QBCore.Functions.CreateCallback('qb-casinojob:server:get:ingredientHulk', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local whiskey = Ply.Functions.GetItemByName("whiskey")
@@ -135,7 +135,7 @@ QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientHulk', funct
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-unicornjob:server:get:ingredientClass', function(source, cb)
+QBCore.Functions.CreateCallback('qb-casinojob:server:get:ingredientClass', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local fruit = Ply.Functions.GetItemByName("fruit-mix")
@@ -150,7 +150,7 @@ end)
 
 ----/////NEW INVENTORY EXPORTS/////////-----------
 
-RegisterNetEvent('qb-unicornjob:server:shotpack', function()
+RegisterNetEvent('qb-casinojob:server:shotpack', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('v-shots-pack', 1)
@@ -160,42 +160,42 @@ RegisterNetEvent('qb-unicornjob:server:shotpack', function()
     Player.Functions.AddItem('shot-fireball', Config.ShotsAmount)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:vodkacrate', function()
+RegisterNetEvent('qb-casinojob:server:vodkacrate', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('vodkacrate', 1)
     Player.Functions.AddItem('vodka', Config.VodkaAmount)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:whiskeybox', function()
+RegisterNetEvent('qb-casinojob:server:whiskeybox', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('whiskey-box', 1)
     Player.Functions.AddItem('whiskey', Config.WhiskeyAmount)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:tequilacrate', function()
+RegisterNetEvent('qb-casinojob:server:tequilacrate', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('tequila-crate', 1)
     Player.Functions.AddItem('tequila', Config.TequilaAmount)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:beerbox', function()
+RegisterNetEvent('qb-casinojob:server:beerbox', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('beer-crate', 1)
     Player.Functions.AddItem('beer', Config.BeerAmount)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:fruitbox', function()
+RegisterNetEvent('qb-casinojob:server:fruitbox', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('fruit-box', 1)
     Player.Functions.AddItem('fruit-mix', Config.FruitAmount)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:espresso', function()
+RegisterNetEvent('qb-casinojob:server:espresso', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('coffee', 1)
@@ -203,7 +203,7 @@ RegisterNetEvent('qb-unicornjob:server:espresso', function()
     Player.Functions.AddItem('v-espressomartini', 1)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:margaritatata', function()
+RegisterNetEvent('qb-casinojob:server:margaritatata', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('tequila', 1)
@@ -212,7 +212,7 @@ RegisterNetEvent('qb-unicornjob:server:margaritatata', function()
     Player.Functions.AddItem('v-margarita', 1)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:manhattan', function()
+RegisterNetEvent('qb-casinojob:server:manhattan', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('whiskey', 1)
@@ -220,7 +220,7 @@ RegisterNetEvent('qb-unicornjob:server:manhattan', function()
     Player.Functions.AddItem('v-manhattan', 1)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:oldfash', function()
+RegisterNetEvent('qb-casinojob:server:oldfash', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('whiskey', 1)
@@ -229,7 +229,7 @@ RegisterNetEvent('qb-unicornjob:server:oldfash', function()
     Player.Functions.AddItem('v-oldfashioned', 1)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:sparkle', function()
+RegisterNetEvent('qb-casinojob:server:sparkle', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('vodka', 1)
@@ -238,7 +238,7 @@ RegisterNetEvent('qb-unicornjob:server:sparkle', function()
     Player.Functions.AddItem('v-sparkles', 1)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:unicorndrink', function()
+RegisterNetEvent('qb-casinojob:server:unicorndrink', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('whiskey', 1)
@@ -247,7 +247,7 @@ RegisterNetEvent('qb-unicornjob:server:unicorndrink', function()
     Player.Functions.AddItem('v-unicorn', 1)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:dancerzz', function()
+RegisterNetEvent('qb-casinojob:server:dancerzz', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('beer', 1)
@@ -256,7 +256,7 @@ RegisterNetEvent('qb-unicornjob:server:dancerzz', function()
     Player.Functions.AddItem('v-dancerz', 1)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:hulkmake', function()
+RegisterNetEvent('qb-casinojob:server:hulkmake', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('whiskey', 1)
@@ -265,7 +265,7 @@ RegisterNetEvent('qb-unicornjob:server:hulkmake', function()
     Player.Functions.AddItem('v-hulk', 1)
 end)
 
-RegisterNetEvent('qb-unicornjob:server:unicorndrink', function()
+RegisterNetEvent('qb-casinojob:server:unicorndrink', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.RemoveItem('fruit-mix', 1)
@@ -276,30 +276,30 @@ end)
 
 QBCore.Functions.CreateUseableItem("v-shots-pack", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
-    TriggerClientEvent("qb-unicornjob:v-shots-pack", source, item.name)
+    TriggerClientEvent("qb-casinojob:v-shots-pack", source, item.name)
 end)
 
 QBCore.Functions.CreateUseableItem("vodka-crate", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
-    TriggerClientEvent("qb-unicornjob:vodka-crate", source, item.name)
+    TriggerClientEvent("qb-casinojob:vodka-crate", source, item.name)
 end)
 
 QBCore.Functions.CreateUseableItem("whiskey-box", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
-    TriggerClientEvent("qb-unicornjob:whiskey-box", source, item.name)
+    TriggerClientEvent("qb-casinojob:whiskey-box", source, item.name)
 end)
 
 QBCore.Functions.CreateUseableItem("beer-crate", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
-    TriggerClientEvent("qb-unicornjob:beer-crate", source, item.name)
+    TriggerClientEvent("qb-casinojob:beer-crate", source, item.name)
 end)
 
 QBCore.Functions.CreateUseableItem("fruit-box", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
-    TriggerClientEvent("qb-unicornjob:fruit-box", source, item.name)
+    TriggerClientEvent("qb-casinojob:fruit-box", source, item.name)
 end)
 
 QBCore.Functions.CreateUseableItem("tequila-crate", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
-    TriggerClientEvent("qb-unicornjob:tequila-crate", source, item.name)
+    TriggerClientEvent("qb-casinojob:tequila-crate", source, item.name)
 end)

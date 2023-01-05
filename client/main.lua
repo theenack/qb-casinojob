@@ -240,12 +240,12 @@ CreateThread(function()
                     end
                 end
   
-                  for k, v in pairs(Config.VunicornLocations["vunicorn-register"]) do
+                  for k, v in pairs(Config.CasinoLocations["casino-register"]) do
                       if #(pos - vector3(v.x, v.y, v.z)) < 1.5 then
                           sleep = 5
                           QBCore.Functions.DrawText3D(v.x, v.y, v.z, "~g~[E]~w~ - Charge Customer")
                           if IsControlJustReleased(0, 38) then
-                              TriggerEvent("qb-unicornjob:bill")
+                              TriggerEvent("qb-casinojob:bill")
                           end
                       elseif #(pos - vector3(v.x, v.y, v.z)) < 1.5 then
                           sleep = 5
@@ -253,12 +253,12 @@ CreateThread(function()
                       end
                   end
  
-                for k, v in pairs(Config.VunicornLocations["vunicorn-garage"]) do
+                for k, v in pairs(Config.CasinoLocations["casino-garage"]) do
                     if #(pos - vector3(v.x, v.y, v.z)) < 1.0 then
                         sleep = 5
                         QBCore.Functions.DrawText3D(v.x, v.y, v.z, "~g~[E]~w~ - Access Garage")
                         if IsControlJustReleased(0, 38) then
-                          TriggerEvent("qb-unicornjob:garage")
+                          TriggerEvent("qb-casinojob:garage")
                         end
                     elseif #(pos - vector3(v.x, v.y, v.z)) < 1.5 then
                         sleep = 5
@@ -271,7 +271,7 @@ CreateThread(function()
     end
   end)
 
-RegisterNetEvent('qb-unicornjob:v-shots-pack', function()
+RegisterNetEvent('qb-casinojob:v-shots-pack', function()
     QBCore.Functions.Progressbar('name_here', 'Opening a pack of shots...', 2000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -282,14 +282,14 @@ RegisterNetEvent('qb-unicornjob:v-shots-pack', function()
         anim = 'fixing_a_ped',
         flags = 16,
     }, {}, {}, function()
-		TriggerServerEvent('qb-unicornjob:server:shotpack')
+		TriggerServerEvent('qb-casinojob:server:shotpack')
         QBCore.Functions.Notify('You opened a pack of shots!', 'primary', 7500)
         ClearPedTasks(PlayerPedId())
     end)
 end)
 
 
-RegisterNetEvent('qb-unicornjob:vodka-crate', function()
+RegisterNetEvent('qb-casinojob:vodka-crate', function()
     QBCore.Functions.Progressbar('name_here', 'Opening a crate of vodka...', 2000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -300,14 +300,14 @@ RegisterNetEvent('qb-unicornjob:vodka-crate', function()
         anim = 'fixing_a_ped',
         flags = 16,
     }, {}, {}, function()
-		TriggerServerEvent('qb-unicornjob:server:vodkacrate')
+		TriggerServerEvent('qb-casinojob:server:vodkacrate')
         QBCore.Functions.Notify('You opened a pack of vodka!', 'primary', 7500)
         ClearPedTasks(PlayerPedId())
     end)
 end)
 
 
-RegisterNetEvent('qb-unicornjob:whiskey-box', function()
+RegisterNetEvent('qb-casinojob:whiskey-box', function()
     QBCore.Functions.Progressbar('name_here', 'Opening a box of whiskey...', 2000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -318,14 +318,14 @@ RegisterNetEvent('qb-unicornjob:whiskey-box', function()
         anim = 'fixing_a_ped',
         flags = 16,
     }, {}, {}, function()
-		TriggerServerEvent('qb-unicornjob:server:whiskeybox')
+		TriggerServerEvent('qb-casinojob:server:whiskeybox')
         QBCore.Functions.Notify('You opened a box of whiskey!', 'primary', 7500)
         ClearPedTasks(PlayerPedId())
     end)
 end)
 
 
-RegisterNetEvent('qb-unicornjob:beer-crate', function()
+RegisterNetEvent('qb-casinojob:beer-crate', function()
     QBCore.Functions.Progressbar('name_here', 'Opening a crate of beer...', 2000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -336,14 +336,14 @@ RegisterNetEvent('qb-unicornjob:beer-crate', function()
         anim = 'fixing_a_ped',
         flags = 16,
     }, {}, {}, function()
-		TriggerServerEvent('qb-unicornjob:server:beerbox')
+		TriggerServerEvent('qb-casinojob:server:beerbox')
         QBCore.Functions.Notify('You opened a crate of beer!', 'primary', 7500)
         ClearPedTasks(PlayerPedId())
     end)
 end)
 
 
-RegisterNetEvent('qb-unicornjob:tequila-crate', function()
+RegisterNetEvent('qb-casinojob:tequila-crate', function()
     QBCore.Functions.Progressbar('name_here', 'Opening a crate of tequila...', 2000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -354,14 +354,14 @@ RegisterNetEvent('qb-unicornjob:tequila-crate', function()
         anim = 'fixing_a_ped',
         flags = 16,
     }, {}, {}, function()
-		TriggerServerEvent('qb-unicornjob:server:tequilacrate')
+		TriggerServerEvent('qb-casinojob:server:tequilacrate')
         QBCore.Functions.Notify('You opened a crate of tequila!', 'primary', 7500)
         ClearPedTasks(PlayerPedId())
     end)
 end)
 
 
-RegisterNetEvent('qb-unicornjob:fruit-box', function()
+RegisterNetEvent('qb-casinojob:fruit-box', function()
     QBCore.Functions.Progressbar('name_here', 'Opening a box of fruit...', 2000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -372,16 +372,16 @@ RegisterNetEvent('qb-unicornjob:fruit-box', function()
         anim = 'fixing_a_ped',
         flags = 16,
     }, {}, {}, function()
-		TriggerServerEvent('qb-unicornjob:server:fruitbox')
+		TriggerServerEvent('qb-casinojob:server:fruitbox')
         QBCore.Functions.Notify('You opened a box of fruit!', 'primary', 7500)
         ClearPedTasks(PlayerPedId())
     end)
 end)
 
-RegisterNetEvent("qb-unicornjob:MakeEspressoMartini")
-AddEventHandler("qb-unicornjob:MakeEspressoMartini", function()
+RegisterNetEvent("qb-casinojob:MakeEspressoMartini")
+AddEventHandler("qb-casinojob:MakeEspressoMartini", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-unicornjob:server:get:ingredientEspressoMartini', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-casinojob:server:get:ingredientEspressoMartini', function(HasItems)  
     		if HasItems then
 				QBCore.Functions.Progressbar("pickup_sla", "Making An Espresso Martini..", 4000, false, true, {
 					disableMovement = true,
@@ -393,7 +393,7 @@ AddEventHandler("qb-unicornjob:MakeEspressoMartini", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-unicornjob:server:espresso')
+					TriggerServerEvent('qb-casinojob:server:espresso')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["v-espressomartini"], "add")
                     			QBCore.Functions.Notify("You made a An Espresso Martini", "success")
 				end, function()
@@ -408,10 +408,10 @@ AddEventHandler("qb-unicornjob:MakeEspressoMartini", function()
 	end  
 end)
 
-RegisterNetEvent("qb-unicornjob:MakeMargarita")
-AddEventHandler("qb-unicornjob:MakeMargarita", function()
+RegisterNetEvent("qb-casinojob:MakeMargarita")
+AddEventHandler("qb-casinojob:MakeMargarita", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-unicornjob:server:get:ingredientmargarita', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-casinojob:server:get:ingredientmargarita', function(HasItems)  
     		if HasItems then
 				QBCore.Functions.Progressbar("pickup_sla", "Making Margarita..", 4000, false, true, {
 					disableMovement = true,
@@ -423,7 +423,7 @@ AddEventHandler("qb-unicornjob:MakeMargarita", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-unicornjob:server:margaritatata')
+					TriggerServerEvent('qb-casinojob:server:margaritatata')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["v-margarita"], "add")
                     			QBCore.Functions.Notify("You made a Margarita", "success")
 				end, function()
@@ -438,10 +438,10 @@ AddEventHandler("qb-unicornjob:MakeMargarita", function()
 	end
 end)
 
-RegisterNetEvent("qb-unicornjob:MakeManhattan")
-AddEventHandler("qb-unicornjob:MakeManhattan", function()
+RegisterNetEvent("qb-casinojob:MakeManhattan")
+AddEventHandler("qb-casinojob:MakeManhattan", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-unicornjob:server:get:ingredientManhattan', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-casinojob:server:get:ingredientManhattan', function(HasItems)  
     		if HasItems then
 				QBCore.Functions.Progressbar("pickup_sla", "Making Manhattan..", 4000, false, true, {
 					disableMovement = true,
@@ -453,7 +453,7 @@ AddEventHandler("qb-unicornjob:MakeManhattan", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-unicornjob:server:manhattan')
+					TriggerServerEvent('qb-casinojob:server:manhattan')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["v-manhattan"], "add")
                     			QBCore.Functions.Notify("You made a Manhattan", "success")
 				end, function()
@@ -468,10 +468,10 @@ AddEventHandler("qb-unicornjob:MakeManhattan", function()
 	end
 end)
 
-RegisterNetEvent("qb-unicornjob:MakeOldFashioned")
-AddEventHandler("qb-unicornjob:MakeOldFashioned", function()
+RegisterNetEvent("qb-casinojob:MakeOldFashioned")
+AddEventHandler("qb-casinojob:MakeOldFashioned", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-unicornjob:server:get:ingredientOldFashioned', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-casinojob:server:get:ingredientOldFashioned', function(HasItems)  
     		if HasItems then
 				QBCore.Functions.Progressbar("pickup_sla", "Making Old Fashioned..", 4000, false, true, {
 					disableMovement = true,
@@ -483,7 +483,7 @@ AddEventHandler("qb-unicornjob:MakeOldFashioned", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-unicornjob:server:oldfash')
+					TriggerServerEvent('qb-casinojob:server:oldfash')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["v-oldfashioned"], "add")
                     			QBCore.Functions.Notify("You made an Old Fashioned", "success")
 				end, function()
@@ -498,10 +498,10 @@ AddEventHandler("qb-unicornjob:MakeOldFashioned", function()
 	end
 end)
 
-RegisterNetEvent("qb-unicornjob:MakeSparkles")
-AddEventHandler("qb-unicornjob:MakeSparkles", function()
+RegisterNetEvent("qb-casinojob:MakeSparkles")
+AddEventHandler("qb-casinojob:MakeSparkles", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-unicornjob:server:get:ingredientSparkles', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-casinojob:server:get:ingredientSparkles', function(HasItems)  
     		if HasItems then
 				QBCore.Functions.Progressbar("pickup_sla", "Making a Sparkles..", 4000, false, true, {
 					disableMovement = true,
@@ -513,7 +513,7 @@ AddEventHandler("qb-unicornjob:MakeSparkles", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-unicornjob:server:sparkle')
+					TriggerServerEvent('qb-casinojob:server:sparkle')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["v-sparkles"], "add")
                     			QBCore.Functions.Notify("You made a Sparkles", "success")
 				end, function()
@@ -528,10 +528,10 @@ AddEventHandler("qb-unicornjob:MakeSparkles", function()
 	end
 end)
 
-RegisterNetEvent("qb-unicornjob:MakeUnicorn")
-AddEventHandler("qb-unicornjob:MakeUnicorn", function()
+RegisterNetEvent("qb-casinojob:MakeUnicorn")
+AddEventHandler("qb-casinojob:MakeUnicorn", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-unicornjob:server:get:ingredientUnicorn', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-casinojob:server:get:ingredientUnicorn', function(HasItems)  
     		if HasItems then
 				QBCore.Functions.Progressbar("pickup_sla", "Making a Unicorn..", 4000, false, true, {
 					disableMovement = true,
@@ -543,7 +543,7 @@ AddEventHandler("qb-unicornjob:MakeUnicorn", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-unicornjob:server:unicorndrink')
+					TriggerServerEvent('qb-casinojob:server:unicorndrink')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["v-unicorn"], "add")
                     			QBCore.Functions.Notify("You made a Unicorn", "success")
 				end, function()
@@ -558,10 +558,10 @@ AddEventHandler("qb-unicornjob:MakeUnicorn", function()
 	end
 end)
 
-RegisterNetEvent("qb-unicornjob:MakeDancerz")
-AddEventHandler("qb-unicornjob:MakeDancerz", function()
+RegisterNetEvent("qb-casinojob:MakeDancerz")
+AddEventHandler("qb-casinojob:MakeDancerz", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-unicornjob:server:get:ingredientDancerz', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-casinojob:server:get:ingredientDancerz', function(HasItems)  
     		if HasItems then
 				QBCore.Functions.Progressbar("pickup_sla", "Making a Dancerz..", 4000, false, true, {
 					disableMovement = true,
@@ -573,7 +573,7 @@ AddEventHandler("qb-unicornjob:MakeDancerz", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-unicornjob:server:dancerzz')
+					TriggerServerEvent('qb-casinojob:server:dancerzz')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["v-dancerz"], "add")
                     			QBCore.Functions.Notify("You made a Dancerz", "success")
 				end, function()
@@ -588,10 +588,10 @@ AddEventHandler("qb-unicornjob:MakeDancerz", function()
 	end
 end)
 
-RegisterNetEvent("qb-unicornjob:MakeHulk")
-AddEventHandler("qb-unicornjob:MakeHulk", function()
+RegisterNetEvent("qb-casinojob:MakeHulk")
+AddEventHandler("qb-casinojob:MakeHulk", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-unicornjob:server:get:ingredientHulk', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-casinojob:server:get:ingredientHulk', function(HasItems)  
     		if HasItems then
 				QBCore.Functions.Progressbar("pickup_sla", "Making a Hulk..", 4000, false, true, {
 					disableMovement = true,
@@ -603,7 +603,7 @@ AddEventHandler("qb-unicornjob:MakeHulk", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-unicornjob:server:hulkmake')
+					TriggerServerEvent('qb-casinojob:server:hulkmake')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["v-hulk"], "add")
                     			QBCore.Functions.Notify("You made a Hulk", "success")
 				end, function()
@@ -618,10 +618,10 @@ AddEventHandler("qb-unicornjob:MakeHulk", function()
 	end
 end)
 
-RegisterNetEvent("qb-unicornjob:MakeClass")
-AddEventHandler("qb-unicornjob:MakeClass", function()
+RegisterNetEvent("qb-casinojob:MakeClass")
+AddEventHandler("qb-casinojob:MakeClass", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-unicornjob:server:get:ingredientClass', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-casinojob:server:get:ingredientClass', function(HasItems)  
     		if HasItems then
 				QBCore.Functions.Progressbar("pickup_sla", "Making a Class..", 4000, false, true, {
 					disableMovement = true,
@@ -633,7 +633,7 @@ AddEventHandler("qb-unicornjob:MakeClass", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-unicornjob:server:unicorndrink')
+					TriggerServerEvent('qb-casinojob:server:unicorndrink')
                     			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["v-class"], "add")
                     			QBCore.Functions.Notify("You made a Class", "success")
 				end, function()
@@ -648,7 +648,7 @@ AddEventHandler("qb-unicornjob:MakeClass", function()
 	end
 end)
    
-RegisterNetEvent("qb-unicornjob:shop")
-AddEventHandler("qb-unicornjob:shop", function()
-    TriggerServerEvent("inventory:server:OpenInventory", "shop", "vunicorn", Config.UnicornItems)
+RegisterNetEvent("qb-casinojob:shop")
+AddEventHandler("qb-casinojob:shop", function()
+    TriggerServerEvent("inventory:server:OpenInventory", "shop", "casino", Config.CasinoItems)
 end)

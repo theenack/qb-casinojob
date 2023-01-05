@@ -8,8 +8,8 @@ local onDuty = false
 -- target
 
 Citizen.CreateThread(function()
-	exports['qb-target']:AddBoxZone("VunicornDuty", vector3(128.55, -1279.62, 29.40), 1, 1.2, {
-		name = "VunicornDuty",
+	exports['qb-target']:AddBoxZone("CasinoDuty", vector3(128.55, -1279.62, 29.40), 1, 1.2, {
+		name = "CasinoDuty",
 		heading = 23.78,
 		debugPoly = false,
 		minZ=29.0,
@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
 	}, {
 		options = {
 		    {  
-			event = "qb-unicornjob:DutyB",
+			event = "qb-casinojob:DutyB",
 			icon = "far fa-clipboard",
 			label = "Clock On/Off",
 			job = "vunicorn",
@@ -35,7 +35,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table1",
+				event = "qb-casinojob:Table1",
 				icon = "far fa-clipboard",
 				label = "Table 1",
 			    },
@@ -52,7 +52,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table2",
+				event = "qb-casinojob:Table2",
 				icon = "far fa-clipboard",
 				label = "Table 2",
 			    },
@@ -69,7 +69,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table3",
+				event = "qb-casinojob:Table3",
 				icon = "far fa-clipboard",
 				label = "Table 3",
 			    },
@@ -86,7 +86,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table4",
+				event = "qb-casinojob:Table4",
 				icon = "far fa-clipboard",
 				label = "Table 4",
 			    },
@@ -103,7 +103,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table5",
+				event = "qb-casinojob:Table5",
 				icon = "far fa-clipboard",
 				label = "Table 5",
 			    },
@@ -120,7 +120,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table6",
+				event = "qb-casinojob:Table6",
 				icon = "far fa-clipboard",
 				label = "Table 6",
 			    },
@@ -137,7 +137,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table7",
+				event = "qb-casinojob:Table7",
 				icon = "far fa-clipboard",
 				label = "Table 7",
 			    },
@@ -154,7 +154,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table8",
+				event = "qb-casinojob:Table8",
 				icon = "far fa-clipboard",
 				label = "Table 8",
 			    },
@@ -171,7 +171,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table9",
+				event = "qb-casinojob:Table9",
 				icon = "far fa-clipboard",
 				label = "Table 9",
 			    },
@@ -189,7 +189,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-unicornjob:Table10",
+				event = "qb-casinojob:Table10",
 				icon = "far fa-clipboard",
 				label = "Table 10",
 			    },
@@ -245,7 +245,7 @@ Citizen.CreateThread(function()
         }, {
                 options = {
                     {
-                        event = "qb-unicornjob:Storage",
+                        event = "qb-casinojob:Storage",
                         icon = "fas fa-box",
                         label = "Storage",
                         job = "vunicorn",
@@ -283,7 +283,7 @@ Citizen.CreateThread(function()
         }, {
                 options = {
                     {
-                        event = "qb-unicornjob:bill",
+                        event = "qb-casinojob:bill",
                         parms = "1",
                         icon = "fas fa-credit-card",
                         label = "Charge Customer",
@@ -310,7 +310,7 @@ RegisterNetEvent('qb-menu:V-Classics', function(data)
             header = "• Espresso Martini",
             txt = "Vodka, Coffee",
             params = {
-                event = "qb-unicornjob:MakeEspressoMartini"
+                event = "qb-casinojob:MakeEspressoMartini"
             }
         },
         {
@@ -318,7 +318,7 @@ RegisterNetEvent('qb-menu:V-Classics', function(data)
             header = "• Margarita",
             txt = "Tequila, Syrup, Fruit Mix",
             params = {
-                event = "qb-unicornjob:MakeMargarita"
+                event = "qb-casinojob:MakeMargarita"
             }
         },
         {
@@ -326,7 +326,7 @@ RegisterNetEvent('qb-menu:V-Classics', function(data)
             header = "• Manhattan",
             txt = "Whiskey, Syrup",
             params = {
-                event = "qb-unicornjob:MakeManhattan"
+                event = "qb-casinojob:MakeManhattan"
             }
         },
         {
@@ -334,7 +334,7 @@ RegisterNetEvent('qb-menu:V-Classics', function(data)
             header = "• Old Fashioned",
             txt = "Whiskey, Syrup",
             params = {
-                event = "qb-unicornjob:MakeOldFashioned"
+                event = "qb-casinojob:MakeOldFashioned"
             }
         },
         {
@@ -358,7 +358,7 @@ RegisterNetEvent('qb-menu:OrderMenu', function(data)
             header = "• Order Items",
             txt = "Order New Ingredients!",
             params = {
-                event = "qb-unicornjob:shop"
+                event = "qb-casinojob:shop"
             }
         },
         {
@@ -366,7 +366,7 @@ RegisterNetEvent('qb-menu:OrderMenu', function(data)
             header = "• Open Fridge",
             txt = "See what you have in storage",
             params = {
-                event = "qb-unicornjob:Storage2"
+                event = "qb-casinojob:Storage2"
             }
         },
         {
@@ -389,7 +389,7 @@ RegisterNetEvent('qb-menu:Homebrewed', function(data)
             header = "• Sparkles",
             txt = "Vodka, Syrup, Fruit",
             params = {
-                event = "qb-unicornjob:MakeSparkles"
+                event = "qb-casinojob:MakeSparkles"
             }
         },
         {
@@ -397,7 +397,7 @@ RegisterNetEvent('qb-menu:Homebrewed', function(data)
             header = "• Unicorn",
             txt = "Whiskey, Syrup, Fruit",
             params = {
-                event = "qb-unicornjob:MakeUnicorn"
+                event = "qb-casinojob:MakeUnicorn"
             }
         },
         {
@@ -405,7 +405,7 @@ RegisterNetEvent('qb-menu:Homebrewed', function(data)
             header = "• Dancerz",
             txt = "Beer, Vodka Bitter",
             params = {
-                event = "qb-unicornjob:MakeDancerz"
+                event = "qb-casinojob:MakeDancerz"
             }
         },
         {
@@ -413,7 +413,7 @@ RegisterNetEvent('qb-menu:Homebrewed', function(data)
             header = "• Hulk",
             txt = "Whiskey, Syrup, Vodka",
             params = {
-                event = "qb-unicornjob:MakeHulk"
+                event = "qb-casinojob:MakeHulk"
             }
         },
         {
@@ -421,7 +421,7 @@ RegisterNetEvent('qb-menu:Homebrewed', function(data)
             header = "• Class Non Alc",
             txt = "Fruit, Syrup, Coffee",
             params = {
-                event = "qb-unicornjob:MakeClass"
+                event = "qb-casinojob:MakeClass"
             }
         },
         {
@@ -434,8 +434,8 @@ end)
 
 
 -- Till Stuff --
-RegisterNetEvent("qb-unicornjob:bill")
-AddEventHandler("qb-unicornjob:bill", function()
+RegisterNetEvent("qb-casinojob:bill")
+AddEventHandler("qb-casinojob:bill", function()
     local bill = exports['qb-input']:ShowInput({
         header = "Create Receipt",
 		submitText = "Bill",
@@ -459,7 +459,7 @@ AddEventHandler("qb-unicornjob:bill", function()
         if bill.citizenid == nil or bill.billprice == nil then 
             return 
         end
-        TriggerServerEvent("qb-unicornjob:bill:player", bill.citizenid, bill.billprice)
+        TriggerServerEvent("qb-casinojob:bill:player", bill.citizenid, bill.billprice)
     end
 end)
 

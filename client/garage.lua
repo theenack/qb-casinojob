@@ -44,11 +44,11 @@ Citizen.CreateThread(function()
     })
 end)
 
-RegisterNetEvent('qb-unicornjob:garage')
-AddEventHandler('qb-unicornjob:garage', function(vu)
+RegisterNetEvent('qb-casinojob:garage')
+AddEventHandler('qb-casinojob:garage', function(vu)
     local vehicle = vu.vehicle
     local coords = vector4(141.87, -1279.58, 29.29, 300.03)
-        if PlayerData.job.name == "vunicorn" then
+        if PlayerData.job.name == "casino" then
             if vehicle == 'schafter3' then		
                 QBCore.Functions.SpawnVehicle(vehicle, function(veh)
                     SetVehicleNumberPlateText(veh, "GIRLZZ"..tostring(math.random(1000, 9999)))
@@ -60,15 +60,15 @@ AddEventHandler('qb-unicornjob:garage', function(vu)
                 end, coords, true)
             end
         else
-            QBCore.Functions.Notify('You are not an employee of Vanilla Unicorn.', 'error')
+            QBCore.Functions.Notify('You are not an employee of the Casino.', 'error')
         end
 end)
 
-RegisterNetEvent('qb-unicornjob:garage2')
-AddEventHandler('qb-unicornjob:garage2', function(vu)
+RegisterNetEvent('qb-casinojob:garage2')
+AddEventHandler('qb-casinojob:garage2', function(vu)
     local vehicle = vu.vehicle
     local coords = vector4(142.03, -1282.91, 28.82, 300.45)
-        if PlayerData.job.name == "vunicorn" then
+        if PlayerData.job.name == "casino" then
             if vehicle == 'toros' then		
                 QBCore.Functions.SpawnVehicle(vehicle, function(veh)
                     SetVehicleNumberPlateText(veh, "GIRLZZ"..tostring(math.random(1000, 9999)))
@@ -80,12 +80,12 @@ AddEventHandler('qb-unicornjob:garage2', function(vu)
                 end, coords, true)
             end
         else
-            QBCore.Functions.Notify('You are not an employee of Vanilla Unicorn.', 'error')
+            QBCore.Functions.Notify('You are not an employee of the Casino.', 'error')
         end
 end)
 
-RegisterNetEvent('qb-unicornjob:storecar')
-AddEventHandler('qb-unicornjob:storecar', function()
+RegisterNetEvent('qb-casinojob:storecar')
+AddEventHandler('qb-casinojob:storecar', function()
     QBCore.Functions.Notify('Work Vehicle Stored!')
     local car = GetVehiclePedIsIn(PlayerPedId(),true)
     NetworkFadeOutEntity(car, true,false)
@@ -103,7 +103,7 @@ RegisterNetEvent('garage:V-UnicornGarage', function()
             header = "• Schafter V12",
             txt = "Sexy Luxury Vehicle",
             params = {
-                event = "qb-unicornjob:garage",
+                event = "qb-casinojob:garage",
                 args = {
                     vehicle = 'schafter3',
                 }
@@ -113,7 +113,7 @@ RegisterNetEvent('garage:V-UnicornGarage', function()
             header = "• Toros",
             txt = "Luxury Transport",
             params = {
-                event = "qb-unicornjob:garage2",
+                event = "qb-casinojob:garage2",
                 args = {
                     vehicle = 'toros',
                 }
@@ -123,7 +123,7 @@ RegisterNetEvent('garage:V-UnicornGarage', function()
             header = "• Store Vehicle",
             txt = "Store Vehicle Inside Garage",
             params = {
-                event = "qb-unicornjob:storecar",
+                event = "qb-casinojob:storecar",
                 args = {
                     
                 }
