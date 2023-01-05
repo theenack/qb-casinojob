@@ -155,38 +155,38 @@ QBShared.Items = {
 ```
 QBShared.Jobs = {
     ['casino'] = {
-		label = 'Casino',
-		defaultDuty = true,
-		offDutyPay = false,
-		grades = {
-            ['0'] = {
-                name = 'Trainee',
-                payment = 25
-            },
-			['1'] = {
-                name = 'Employee',
-                payment = 40
-            },
-			['2'] = {
-                name = 'Bar Staff',
-                payment = 50
-            },
-			['3'] = {
-                name = 'Dancer',
-                payment = 80
-            },
-			['4'] = {
-                name = 'Manager',
-				isboss = true,
-                payment = 100
-            },
-            ['5'] = {
-                name = 'Owner',
-				isboss = true,
-                payment = 150
-            },
-        },
-	},
+	label = 'Casino',
+	defaultDuty = true,
+	offDutyPay = false,
+	grades = {
+            	['0'] = {
+                	name = 'Trainee',
+                	payment = 25
+           	},
+		['1'] = {
+                	name = 'Employee',
+                	payment = 40
+            	},
+		['2'] = {
+                	name = 'Bar Staff',
+                	payment = 50
+            	},
+		['3'] = {
+                	name = 'Dancer',
+                	payment = 80
+            	},
+		['4'] = {
+                	name = 'Manager',
+			isboss = true,
+                	payment = 100
+            	},
+            	['5'] = {
+                	name = 'Owner',
+			isboss = true,
+                	payment = 150
+            	},
+       	    },
+      },
 }		
 ```
 
